@@ -6,8 +6,6 @@ body {
     height: 100vh;
   }
 
-
-    
   .login-box {
     width: 400px;
     height: 570px;
@@ -69,12 +67,12 @@ body {
   }
   
   .login-box input[type="submit"] {
-    width: 40%;
+    width: 100%;
     margin-bottom: 20px;
     border: none;
     outline: none;
     height: 40px;
-    background: #fc6703;
+    background: #ff6600;
     color: rgb(0, 0, 0);
     font-size: 18px;
     border-radius: 20px;

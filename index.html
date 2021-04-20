@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <style>
+    .container { 
+        height: 200px;
+        position: relative;
+        border: 3px solid green; 
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="login-box">
+            <h1>Eliga una opcion</h1>
+            <form id="user" name="user" method="post" action="login.php">
+            <p>
+                <input type="submit" name="login" id="enviar" value="Venta">
+                <input type="submit" name="login" id="enviar" value="Altas">
+                <input type="submit" name="login" id="enviar" value="Bajas">
+                <input type="submit" name="login" id="enviar" value="Consultas">
+            </p>
+            </form>
+    </div>
+  </body>
+</html>
