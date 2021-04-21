@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <style>
+    .container { 
+        height: 200px;
+        position: relative;
+        border: 3px solid green; 
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="login-box">
+            <h1>Consultas</h1>
+            <h2>Seleccione una opcion</h2>
+            <form id="user" name="user" method="post">
+            <p>
+              <input type="button" name="login" id="enviar" value="Videojuegos" onclick="location.href='videojuegos.html'">
+              <input type="button" name="login" id="enviar" value="Clientes" onclick="location.href='clientes.html'">
+            </p>
+            </form>
+    </div>
+  </body>
+</html>

@@ -1,24 +1,24 @@
 <?php
-  $user=$_POST['user'];
+  $user_number=$_POST['user_number'];
   $password=$_POST['password'];
-  $url = "login.html";
+  $url = "index.html";
 
   $con=mysqli_connect("localhost","root","","cookie_games");
   //mysqli_query($con,"INSERT INTO subgeneros (subgenero) VALUES ('$subgenero')")
 
-  if (empty($_POST['user']) || empty($_POST['password'])) {
+  if (empty($_POST['user_number']) || empty($_POST['password'])) {
 
     echo '<script>alert("Ingrese usuario y password")</script>';
   }else{
     //echo '<script>alert("Usuario y contraseña ingresados")</script>';
     //$password =  sha1($password); //Algoritmo de encriptacion de la password http://php.net/manual/es/function.sha1.php
 
-    $sql = "SELECT user, password FROM login WHERE user = '".$user."' AND password= '".$password."';";
+    $sql = "SELECT user_number, password FROM login WHERE user_number = '".$user_number."' AND password= '".$password."';";
     $query=mysqli_query($con,$sql);
     $counter=mysqli_num_rows($query);
     if ($counter > 0){
       echo '<script>alert("Inicio de sesion correcto")</script>';
-      $url = "index.html";
+      $url = "menu.html";
     }else{
       echo '<script>alert("Inicio de sesion incorrecto, intente de nuevo")</script>';
     }

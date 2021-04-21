@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <style>
+        .container { 
+            height: 200px;
+            position: relative;
+            border: 3px solid green; 
+        }
+    
+        .center {
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    
+        th, td {
+            text-align: center;
+        }
+    
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.center {
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="login-box">
+            <h1>Bajas</h1>
+            <h2>Seleccione una opcion</h2>
+            <form id="user" name="user" method="post">
+            <p>
+                <table>
+                    <tr>
+                        <td><input type="button" name="login" id="enviar" value="Genero" onclick="location.href='downgenero.html'"></td>
+                        <td><input type="button" name="login" id="enviar" value="Subgenero" onclick="location.href='downsubgenero.html'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="login" id="enviar" value="Plataforma" onclick="location.href='downplataforma.html'"></td>
+                        <td><input type="button" name="login" id="enviar" value="Clasificacion" onclick="location.href='downclasificacion.html'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="login" id="enviar" value="Desarrollador" onclick="location.href='downdesarrollador.html'"></td>
+                        <td><input type="button" name="login" id="enviar" value="Videojuego" onclick="location.href='downvideojuego.html'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="login" id="enviar" value="Venta" onclick="location.href='downventa.html'"></td>
+                        <td><input type="button" name="login" id="enviar" value="Nacionalidad" onclick="location.href='downnacionalidad.html'"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="login" id="enviar" value="Cliente" onclick="location.href='downcliente.html'"></td>
+                        <td><input type="button" name="login" id="enviar" value="Registro" onclick="location.href='downregistro.html'"></td>
+                    </tr>
+                </table>
+            </p>
+            </form>
+    </div>
+  </body>
+</html>

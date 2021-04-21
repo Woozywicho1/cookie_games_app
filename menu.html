@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <style>
+    .container { 
+        height: 200px;
+        position: relative;
+        border: 3px solid green; 
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    </style>
+  <head>
+    <meta charset="utf-8">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="login-box">
+            <h1>Manu principal</h1>
+            <h2>Seleccione una opcion</h2>
+            <form id="user" name="user" method="post">
+            <p>
+              <input type="button" name="login" id="enviar" value="Venta" onclick="location.href='ventas.html'">
+              <input type="button" name="login" id="enviar" value="Altas" onclick="location.href='altas.html'">
+              <input type="button" name="login" id="enviar" value="Bajas" onclick="location.href='bajas.html'">
+              <input type="button" name="login" id="enviar" value="Consultas" onclick="location.href='consultas.html'">
+            </p>
+            </form>
+    </div>
+  </body>
+</html>
