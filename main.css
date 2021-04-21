@@ -52,6 +52,8 @@ body {
     font-size: 27px;
     font-family: Garamond;
   }
+  
+  
 
   .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="tel"] {
     font-family: 'Lucida Console';
@@ -81,23 +83,7 @@ body {
   .login-box input[type="submit"]:hover {
     cursor: pointer;
     background: #00fde8;
-    color: rgb(255, 255, 255); 
-  }
-
-  .login-box input[type="button"]{
-    width: 100%;
-    margin-bottom: 20px;
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #ff6600;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    border-radius: 20px;
-  }
-
-  .login-box input[type="button"]:hover {
-    cursor: pointer;
-    background: #00fde8;
     color: rgb(255, 255, 255);
+    
   }
+  
