@@ -32,7 +32,7 @@
 $host    = "localhost";
 $user    = "root";
 $pass    = "";
-$db_name = "cookie_games";
+$db_name = "cookie_games_database";
 
 //create connection
 $connection = mysqli_connect($host, $user, $pass, $db_name);
@@ -73,6 +73,7 @@ echo "</table>";
   </table>
                 
                       <input type="button" name="login" id="enviar" value="Enviar" onclick="location.href='videojuegos.html'">
+                      <input type="button" name="login" id="editarr" value="Editar" onclick="location.href='edit.html'">
         
             </div>
     </div>
