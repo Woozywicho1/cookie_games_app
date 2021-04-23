@@ -1,9 +1,9 @@
 <?php
-  $genero = $_POST['genero'];
+  $clasificacion = $_POST['clasificacion'];
 
   $con=mysqli_connect("localhost","root","","cookie_games");
 
-  mysqli_query($con,"INSERT INTO generos (genero) VALUES ('$genero')")
+  mysqli_query($con,"INSERT INTO clasificacion (clasificacion) VALUES ('$clasificacion')")
 ?>
 
 <!DOCTYPE html>

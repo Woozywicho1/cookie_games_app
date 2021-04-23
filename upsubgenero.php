@@ -1,10 +1,11 @@
 <?php
-  $genero = $_POST['genero'];
+  $subgenero = $_POST['subgenero'];
 
   $con=mysqli_connect("localhost","root","","cookie_games");
 
-  mysqli_query($con,"INSERT INTO generos (genero) VALUES ('$genero')")
+  mysqli_query($con,"INSERT INTO subgeneros (subgenero) VALUES ('$subgenero')")
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
