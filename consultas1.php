@@ -26,50 +26,28 @@
             <h1>Consultas</h1>
             <table>
       <tr>
+	  <th>ID Videojuego</th>
+	  <th>Nombre</th>
+	  <th>Año</th>
+	  <th>Precio</th>
+	  <th>ID Genero</th>
+	  <th>ID Subgenero</th>
+	  <th>Plataforma</th>
+	  <th>Clasificacion</th>
+	  <th>Desarrollador</th>
       </tr>
-      
-      <?php
-$host    = "localhost";
-$user    = "root";
-$pass    = "";
-$db_name = "cookie_games";
-
-//create connection
-$connection = mysqli_connect($host, $user, $pass, $db_name);
-
-//test if connection failed
-if(mysqli_connect_errno()){
-    die("connection failed: "
-        . mysqli_connect_error()
-        . " (" . mysqli_connect_errno()
-        . ")");
-}
-
-//get results from database
-$result = mysqli_query($connection,"SELECT * FROM videojuego");
-$all_property = array();  //declare an array for saving property
-
-//showing property
-echo '<table class="data-table">
-        <tr class="data-heading">';  //initialize table tag
-while ($property = mysqli_fetch_field($result)) {
-    echo '<td>' . $property->name . '</td>';  //get field name for header
-    array_push($all_property, $property->name);  //save those to array
-}
-echo '</tr>'; //end tr tag
-
-//showing all data
-while ($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    foreach ($all_property as $item) {
-        echo '<td>' . $row[$item] . '</td>'; //get items using property value
-    }
-    echo '</tr>';
-}
-echo "</table>";
-?>
-
-
+      <?php>
+	  $con=mysqli_connect("localhost","root","","cookie_games");
+	  if ($con->connect_error){
+		die("Conexion fallida: " . $con->connect_error);
+	  }
+	  $sql = "SELECT id_videojuego, nombre, año, precio, id_genero, id_subgenero, id_plataforma, id_clasificacion, id_desarrollador FROM videojuego";
+	  if ($result= $con->query($sql)){
+		while($row = $result->fetch_assoc()) {
+			echo '<tr><td>' . $row["id_videojuego"] . '</td><td>' . $row["nombre"] . '</td><td>' . $row["año"] . '</td><td>' . $row["precio"] . '</td><td>' . $row["id_genero"] . '</td><td>' . $row["id_subgenero"] . '</td><td>' . $row["id_plataforma"] . '</td><td>' . $row["id_clasificacion"] . '</td><td>' . $row["id_desarrollador"]. '</td></tr>';
+		}$result->free();
+	  }
+      ?>
   </table>
                 
                       <input type="button" name="login" id="enviar" value="Enviar" onclick="location.href='videojuegos.html'">
