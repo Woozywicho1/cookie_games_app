@@ -42,8 +42,7 @@
 		die("Conexion fallida: " . $con->connect_error);
 	  }
 	  $sql = "SELECT id_videojuego, nombre, año, precio, id_genero, id_subgenero, id_plataforma, id_clasificacion, id_desarrollador FROM videojuego";
-	  $result = $con->query($sql);
-	  if ($result= $mysqli->query($query)){
+	  if ($result= $con->query($sql)){
 		while($row = $result->fetch_assoc()) {
 			echo '<tr><td>' . $row["id_videojuego"] . '</td><td>' . $row["nombre"] . '</td><td>' . $row["año"] . '</td><td>' . $row["precio"] . '</td><td>' . $row["id_genero"] . '</td><td>' . $row["id_subgenero"] . '</td><td>' . $row["id_plataforma"] . '</td><td>' . $row["id_clasificacion"] . '</td><td>' . $row["id_desarrollador"]. '</td></tr>';
 		}$result->free();
