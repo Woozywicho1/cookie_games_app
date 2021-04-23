@@ -32,7 +32,7 @@
 $host    = "localhost";
 $user    = "root";
 $pass    = "";
-$db_name = "cookie_games";
+$db_name = "cookie_games_database";
 
 //create connection
 $connection = mysqli_connect($host, $user, $pass, $db_name);
@@ -73,51 +73,9 @@ echo "</table>";
   </table>
                 
                       <input type="button" name="login" id="enviar" value="Enviar" onclick="location.href='videojuegos.html'">
+                      <input type="button" name="login" id="editarr" value="Editar" onclick="location.href='edit.html'">
         
             </div>
-    </div>
-
-
-    <div class="edit-box">
-      <table>
-      <tr>
-          <td><h3>Id Videojuego: </h3></td>
-          <td><input type="text" name="id_videojuego" id="id_videojuego"></td>
-      </tr>
-      <tr>
-          <td><h3>Nombre: </h3></td>
-          <td><input type="text" name="nombre" id="nombre"></td>
-      </tr>
-      <tr>
-          <td><h3>Año: </h3></td>
-          <td><input type="text" name="año" id="año"></td>
-      </tr>
-      <tr>
-          <td><h3>Precio: </h3></td>
-        <td><input type="text" name="precio" id="precio"></td>
-      </tr>
-      <tr>
-          <td><h3>Id Genero: </h3></td>
-        <td><input type="text" name="id_genero" id="id_genero"></td>
-      </tr>
-      <tr>
-          <td><h3>Id Subgenero: </h3></td>
-        <td><input type="text" name="id_subgenero" id="id_subgenero"></td>
-       </tr>
-       <td><h3>Id Plataforma: </h3></td>
-        <td><input type="text" name="id_plataforma" id="id_plataforma"></td>
-       </tr>
-       <td><h3>Id Clasificación: </h3></td>
-        <td><input type="text" name="id_calsificacion" id="id_clasificacion"></td>
-       </tr>
-       <td><h3>Id Desarrollador: </h3></td>
-       <td><input type="text" name="id_desarrollador" id="id_desarrollador"></td>
-      </tr>
-
-  </table>
-        
-              <input type="button" name="login" id="enviar" value="Enviar" onclick="location.href='videojuegos.html'">
-
     </div>
   
   </body>
