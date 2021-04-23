@@ -17,7 +17,7 @@
     </style>
   <head>
     <meta charset="utf-8">
-    <title>Menu Principal</title>
+    <title>Consultas</title>
     <link rel="stylesheet" href="consultas.css">
   </head>
   <body>
@@ -36,26 +36,24 @@
 	  <th>Clasificacion</th>
 	  <th>Desarrollador</th>
       </tr>
-      <?php>
-	  $con=mysqli_connect("localhost","root","","cookie_games");
+      <?php
+	  $con=mysqli_connect("localhost","root","","cookie_games_database");
 	  if ($con->connect_error){
 		die("Conexion fallida: " . $con->connect_error);
 	  }
 	  $sql = "SELECT id_videojuego, nombre, año, precio, id_genero, id_subgenero, id_plataforma, id_clasificacion, id_desarrollador FROM videojuego";
-	  $result = $con->query($sql);
-	  if ($result->num_rows > 0){
+	  if ($result=$con->query($sql)){
 		while($row = $result->fetch_assoc()) {
 			echo "<tr><td>" . $row["id_videojuego"] . "</td><td>" . $row["nombre"] . "</td><td>" . $row["año"] . "</td><td>" . $row["precio"] . "</td><td>" . $row["id_genero"] . "</td><td>" . $row["id_subgenero"] . "</td><td>" . $row["id_plataforma"] . "</td><td>" . $row["id_clasificacion"] . "</td><td>" . $row["id_desarrollador"]. "</td></tr>";
 		}
 		echo "</table>";
-	  } else { echo "0 results"; }
+	  } 
 	  $con->close();
       ?>
   </table>
                 
                       <input type="button" name="login" id="enviar" value="Enviar" onclick="location.href='videojuegos.html'">
         
-            </div>
     </div>
 
 
