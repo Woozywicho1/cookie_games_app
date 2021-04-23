@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <style>
+    .container { 
+        height: 200px;
+        position: relative;
+        border: 3px solid green; 
+    }
+
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    th, td {
+        text-align: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    table.center {
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    </style>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Insertar videojuego</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>Alta videojuego</h2>
+      <form id="videojuego" name="videojuego" method="post" action="upvideojuego.php">
+        <p>
+          <table>
+            <tr>
+              <td><h2>Nombre</h2></td>
+              <td><input type="text" name="nombre" id="videojuego"></td>
+            </tr>
+            <tr>
+              <td><h2>Año</h2></td>
+              <td><input type="text" name="año" id="year"></td>
+            </tr>
+            <tr>
+              <td><h2>Precio</h2></td>
+              <td><input type="text" name="precio" id="precio"></td>
+            </tr>
+            <tr>
+              <td><h2>Genero</h2></td>
+              <td><input type="text" name="genero" id="genero"></td>
+            </tr>
+            <tr>
+              <td><h2>Subgenero</h2></td>
+              <td><input type="text" name="subgenero" id="subgenero"></td>
+            </tr>
+            <tr>
+              <td><h2>Plataforma</h2></td>
+              <td><input type="text" name="plataforma" id="plataforma"></td>
+            </tr>
+            <tr>
+              <td><h2>Clasificacion</h2></td>
+              <td><input type="text" name="clasificacion" id="clasificacion"></td>
+            </tr>
+            <tr>
+              <td><h2>Desarrollador</h2></td>
+              <td><input type="text" name="desarrollador" id="desarrollador"></td>
+            </tr>
+            <tr>
+              <td><h2>Cantidad</h2></td>
+              <td><input type="text" name="cantidad" id="cantidad"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" name="enviar" id="enviar" value="Enviar"></td>
+            </tr>
+          </table>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
